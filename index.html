@@ -1,0 +1,1468 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>磁力搜索磁力链接 - 资源发现社区 | 磁极视界官网</title>
+<meta name="description" content="磁力搜索磁力链接官方网站，磁极视界是面向资源发现与内容分享的磁力搜索磁力链接品牌平台，提供高清资源索引、创作者社区与正版内容生态。">
+<meta name="keywords" content="磁力搜索,磁力链接,资源索引,磁极视界,官网">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f172a'/%3E%3Cpath d='M20 18h10v12h10V18h10v22a10 10 0 0 1-10 10h-6l-6-8h8a4 4 0 0 0 4-4V34H30v6l-10-11z' fill='%2338bdf8'/%3E%3C/svg%3E">
+<style>
+:root{
+  --mj-night:#0b1020;
+  --mj-night2:#111a31;
+  --mj-card:#16213d;
+  --mj-card2:#1b2847;
+  --mj-line:rgba(120,160,255,.16);
+  --mj-neon:#38bdf8;
+  --mj-neon2:#7c5cff;
+  --mj-mint:#35e0a1;
+  --mj-text:#e8eefc;
+  --mj-sub:#a3b1d1;
+  --mj-dim:#6f7fa6;
+  --mj-radius:16px;
+  --mj-shadow:0 18px 44px rgba(3,8,22,.55);
+  --mj-annc-h:44px;
+  --mj-head-h:64px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:"PingFang SC","Microsoft YaHei","Hiragino Sans GB",system-ui,-apple-system,sans-serif;
+  background:
+    radial-gradient(1100px 520px at 12% -8%,rgba(56,189,248,.16),transparent 62%),
+    radial-gradient(900px 480px at 92% 4%,rgba(124,92,255,.18),transparent 60%),
+    var(--mj-night);
+  color:var(--mj-text);
+  line-height:1.75;
+  font-size:15px;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+ul{list-style:none}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
+section{scroll-margin-top:calc(var(--mj-annc-h) + var(--mj-head-h) + 18px)}
+.mj-wrap{width:min(1180px,92vw);margin:0 auto}
+.mj-annc{
+  position:sticky;top:0;z-index:120;
+  background:linear-gradient(90deg,#1b2a55,#243a72 45%,#1a2b56);
+  border-bottom:1px solid rgba(56,189,248,.28);
+  height:var(--mj-annc-h);
+  display:flex;align-items:center;
+  font-size:13px;color:#cfe0ff;
+  overflow:hidden;
+}
+.mj-annc .mj-wrap{display:flex;align-items:center;gap:12px;white-space:nowrap;overflow:hidden}
+.mj-annc-tag{
+  flex:0 0 auto;background:var(--mj-neon);color:#04101f;
+  font-weight:700;font-size:11px;padding:2px 9px;border-radius:99px;letter-spacing:.5px;
+}
+.mj-annc-track{display:flex;gap:34px;animation:mjSlide 30s linear infinite}
+@keyframes mjSlide{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.mj-annc-track span{opacity:.92}
+.mj-annc-track span b{color:var(--mj-mint);font-weight:600}
+.mj-head{
+  position:sticky;top:var(--mj-annc-h);z-index:110;
+  background:rgba(11,16,32,.86);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--mj-line);
+  height:var(--mj-head-h);
+  display:flex;align-items:center;
+}
+.mj-head .mj-wrap{display:flex;align-items:center;gap:22px}
+.mj-logo{display:flex;align-items:center;gap:10px;flex:0 0 auto}
+.mj-logo-mark{
+  width:34px;height:34px;border-radius:10px;
+  background:linear-gradient(135deg,var(--mj-neon),var(--mj-neon2));
+  display:grid;place-items:center;font-weight:800;color:#04101f;font-size:17px;
+  box-shadow:0 0 22px rgba(56,189,248,.45);
+}
+.mj-logo-txt{font-size:17px;font-weight:700;letter-spacing:.5px}
+.mj-logo-txt em{font-style:normal;color:var(--mj-neon)}
+.mj-nav{display:flex;gap:4px;margin-left:6px;flex:1 1 auto;flex-wrap:wrap}
+.mj-nav a{
+  font-size:14px;color:var(--mj-sub);padding:6px 12px;border-radius:9px;
+  transition:.22s;
+}
+.mj-nav a:hover,.mj-nav a.is-active{color:#fff;background:rgba(56,189,248,.14)}
+.mj-search{
+  flex:0 0 auto;display:flex;align-items:center;gap:6px;
+  background:var(--mj-card);border:1px solid var(--mj-line);
+  border-radius:11px;padding:4px 4px 4px 12px;
+  width:250px;transition:.24s;
+}
+.mj-search:focus-within{border-color:rgba(56,189,248,.6);box-shadow:0 0 0 3px rgba(56,189,248,.12)}
+.mj-search input{
+  flex:1 1 auto;background:none;border:none;outline:none;color:var(--mj-text);
+  font-size:13px;min-width:0;
+}
+.mj-search input::placeholder{color:var(--mj-dim)}
+.mj-search button{
+  flex:0 0 auto;background:linear-gradient(135deg,var(--mj-neon),var(--mj-neon2));
+  color:#04101f;font-weight:700;font-size:12px;padding:6px 13px;border-radius:8px;
+  transition:.2s;
+}
+.mj-search button:hover{filter:brightness(1.12)}
+.mj-burger{
+  display:none;flex:0 0 auto;width:40px;height:38px;border-radius:9px;
+  border:1px solid var(--mj-line);background:var(--mj-card);
+  position:relative;
+}
+.mj-burger span{position:absolute;left:11px;right:11px;height:2px;background:var(--mj-text);border-radius:2px;transition:.26s}
+.mj-burger span:nth-child(1){top:12px}
+.mj-burger span:nth-child(2){top:18px}
+.mj-burger span:nth-child(3){top:24px}
+.mj-burger.is-open span:nth-child(1){top:18px;transform:rotate(45deg)}
+.mj-burger.is-open span:nth-child(2){opacity:0}
+.mj-burger.is-open span:nth-child(3){top:18px;transform:rotate(-45deg)}
+.mj-hero{padding:58px 0 40px;position:relative;overflow:hidden}
+.mj-hero::after{
+  content:"";position:absolute;inset:auto -10% -60% -10%;height:420px;
+  background:radial-gradient(closest-side,rgba(124,92,255,.20),transparent);
+  pointer-events:none;
+}
+.mj-hero-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:44px;align-items:center;position:relative;z-index:2}
+.mj-badge{
+  display:inline-flex;align-items:center;gap:8px;font-size:12.5px;color:var(--mj-mint);
+  border:1px solid rgba(53,224,161,.32);background:rgba(53,224,161,.09);
+  padding:5px 13px;border-radius:99px;margin-bottom:20px;letter-spacing:.3px;
+}
+.mj-badge::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--mj-mint);box-shadow:0 0 10px var(--mj-mint)}
+.mj-hero h1{
+  font-size:clamp(34px,4.6vw,54px);line-height:1.14;letter-spacing:-.5px;font-weight:800;
+  margin-bottom:8px;
+  background:linear-gradient(105deg,#ffffff 20%,#8fd6ff 58%,#b9a6ff 96%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.mj-hero-alias{font-size:15px;color:var(--mj-neon);letter-spacing:2px;margin-bottom:16px;font-weight:600}
+.mj-hero-lead{font-size:15.5px;color:var(--mj-sub);max-width:560px;margin-bottom:22px}
+.mj-hero-lead strong{color:#cfe6ff;font-weight:600}
+.mj-hero-btns{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:26px}
+.mj-btn{
+  display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:600;
+  padding:11px 22px;border-radius:11px;transition:.24s;white-space:nowrap;
+}
+.mj-btn-primary{
+  background:linear-gradient(135deg,var(--mj-neon),var(--mj-neon2));color:#04101f;
+  box-shadow:0 10px 26px rgba(56,189,248,.30);
+}
+.mj-btn-primary:hover{transform:translateY(-2px);box-shadow:0 16px 32px rgba(56,189,248,.42)}
+.mj-btn-ghost{border:1px solid var(--mj-line);color:var(--mj-text);background:rgba(22,33,61,.7)}
+.mj-btn-ghost:hover{border-color:rgba(56,189,248,.5);color:#fff;background:rgba(56,189,248,.10)}
+.mj-stats{display:flex;gap:30px;flex-wrap:wrap}
+.mj-stat-num{font-size:26px;font-weight:800;color:#fff;letter-spacing:.5px}
+.mj-stat-num s{text-decoration:none;color:var(--mj-neon);font-size:15px;margin-left:2px}
+.mj-stat-label{font-size:12.5px;color:var(--mj-dim);letter-spacing:.4px}
+.mj-hero-visual{position:relative}
+.mj-hero-img{
+  border-radius:20px;overflow:hidden;border:1px solid var(--mj-line);
+  box-shadow:var(--mj-shadow);position:relative;background:var(--mj-card);
+}
+.mj-hero-img img{width:100%;height:auto;aspect-ratio:16/11;object-fit:cover}
+.mj-hero-float{
+  position:absolute;left:-16px;bottom:-18px;background:rgba(17,26,49,.94);
+  border:1px solid var(--mj-line);border-radius:14px;padding:12px 16px;
+  display:flex;align-items:center;gap:11px;box-shadow:var(--mj-shadow);backdrop-filter:blur(10px);
+}
+.mj-hero-float b{font-size:19px;color:var(--mj-mint)}
+.mj-hero-float span{font-size:12px;color:var(--mj-sub);line-height:1.4}
+.mj-hero-tag{
+  position:absolute;right:14px;top:14px;font-size:11.5px;font-weight:600;
+  background:rgba(6,12,26,.78);border:1px solid rgba(56,189,248,.4);color:var(--mj-neon);
+  padding:4px 11px;border-radius:99px;backdrop-filter:blur(6px);
+}
+.mj-section{padding:52px 0}
+.mj-sec-head{margin-bottom:28px;max-width:760px}
+.mj-kicker{font-size:12.5px;letter-spacing:3px;color:var(--mj-neon);font-weight:700;margin-bottom:8px;text-transform:uppercase}
+.mj-sec-head h2{font-size:clamp(22px,2.6vw,30px);font-weight:800;letter-spacing:-.2px;margin-bottom:9px;color:#fff}
+.mj-sec-head p{font-size:14.5px;color:var(--mj-sub)}
+.mj-sec-line{height:1px;background:linear-gradient(90deg,rgba(56,189,248,.5),transparent);margin-top:14px}
+.mj-intro-box{
+  background:linear-gradient(160deg,rgba(22,33,61,.9),rgba(17,26,49,.7));
+  border:1px solid var(--mj-line);border-radius:20px;padding:36px 38px;
+  box-shadow:var(--mj-shadow);
+}
+.mj-intro-box h2{font-size:clamp(21px,2.4vw,28px);margin-bottom:16px;color:#fff;font-weight:800}
+.mj-intro-box h3{font-size:16.5px;color:var(--mj-mint);margin:22px 0 8px;font-weight:700}
+.mj-intro-box p{font-size:14.6px;color:#c2cfe8;margin-bottom:12px}
+.mj-intro-box p b{color:#fff;font-weight:600}
+.mj-intro-cols{columns:2;column-gap:44px}
+@media(max-width:820px){.mj-intro-cols{columns:1}}
+.mj-focus-grid{display:grid;grid-template-columns:1.35fr 1fr;gap:20px}
+.mj-focus-main{
+  position:relative;border-radius:var(--mj-radius);overflow:hidden;border:1px solid var(--mj-line);
+  background:var(--mj-card);box-shadow:var(--mj-shadow);cursor:pointer;
+}
+.mj-focus-main img{width:100%;aspect-ratio:16/10;object-fit:cover;transition:.5s}
+.mj-focus-main:hover img{transform:scale(1.05)}
+.mj-focus-overlay{
+  position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;
+  padding:24px;background:linear-gradient(180deg,transparent 32%,rgba(5,9,20,.92) 100%);
+}
+.mj-focus-overlay h3{font-size:21px;color:#fff;margin-bottom:6px;font-weight:800}
+.mj-focus-overlay p{font-size:13.5px;color:var(--mj-sub);margin-bottom:12px}
+.mj-tagrow{display:flex;gap:8px;flex-wrap:wrap}
+.mj-tag{
+  font-size:11.5px;padding:3px 10px;border-radius:99px;
+  background:rgba(56,189,248,.12);color:var(--mj-neon);border:1px solid rgba(56,189,248,.26);
+}
+.mj-focus-side{display:grid;grid-template-columns:1fr;gap:14px}
+.mj-focus-mini{
+  display:grid;grid-template-columns:104px 1fr;gap:12px;align-items:center;
+  background:var(--mj-card);border:1px solid var(--mj-line);border-radius:13px;
+  padding:10px;transition:.24s;cursor:pointer;
+}
+.mj-focus-mini:hover{transform:translateX(4px);border-color:rgba(56,189,248,.45);background:var(--mj-card2)}
+.mj-focus-mini img{width:104px;height:66px;object-fit:cover;border-radius:9px}
+.mj-focus-mini h4{font-size:13.4px;color:#e8eefc;font-weight:600;margin-bottom:4px;line-height:1.4}
+.mj-focus-mini span{font-size:11.5px;color:var(--mj-dim)}
+.mj-video-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.mj-card{
+  background:var(--mj-card);border:1px solid var(--mj-line);border-radius:var(--mj-radius);
+  overflow:hidden;transition:.26s;display:flex;flex-direction:column;
+}
+.mj-card:hover{transform:translateY(-5px);border-color:rgba(56,189,248,.42);box-shadow:0 22px 40px rgba(3,8,22,.6)}
+.mj-cover{position:relative;overflow:hidden;background:var(--mj-card2)}
+.mj-cover img{width:100%;aspect-ratio:16/9;object-fit:cover;transition:.5s}
+.mj-card:hover .mj-cover img{transform:scale(1.06)}
+.mj-cover-tag{
+  position:absolute;left:10px;top:10px;font-size:11px;font-weight:600;
+  background:rgba(5,10,24,.82);border:1px solid rgba(56,189,248,.35);color:var(--mj-neon);
+  padding:3px 9px;border-radius:7px;backdrop-filter:blur(5px);
+}
+.mj-cover-dur{
+  position:absolute;right:10px;bottom:10px;font-size:11px;color:#dbe7ff;
+  background:rgba(5,10,24,.8);padding:2px 8px;border-radius:6px;
+}
+.mj-cover-play{
+  position:absolute;inset:0;display:grid;place-items:center;opacity:0;transition:.26s;
+  background:rgba(5,10,24,.34);
+}
+.mj-card:hover .mj-cover-play{opacity:1}
+.mj-cover-play i{
+  width:46px;height:46px;border-radius:50%;background:rgba(56,189,248,.92);
+  display:grid;place-items:center;color:#04101f;font-style:normal;font-size:16px;
+  box-shadow:0 0 26px rgba(56,189,248,.6);
+}
+.mj-card-body{padding:16px 16px 14px;display:flex;flex-direction:column;flex:1 1 auto}
+.mj-card-body h3{font-size:15.2px;font-weight:700;color:#fff;line-height:1.48;margin-bottom:7px}
+.mj-card-body>p{font-size:12.9px;color:var(--mj-sub);margin-bottom:12px;flex:1 1 auto}
+.mj-meta{display:flex;align-items:center;gap:8px;font-size:11.8px;color:var(--mj-dim);margin-bottom:12px}
+.mj-avatar{
+  width:24px;height:24px;border-radius:50%;display:grid;place-items:center;
+  font-size:11px;font-weight:700;color:#04101f;flex:0 0 auto;
+}
+.mj-card-actions{display:flex;align-items:center;gap:8px;border-top:1px solid var(--mj-line);padding-top:11px}
+.mj-act{
+  display:inline-flex;align-items:center;gap:5px;font-size:12px;color:var(--mj-sub);
+  padding:4px 9px;border-radius:8px;transition:.2s;
+}
+.mj-act:hover{background:rgba(56,189,248,.12);color:var(--mj-neon)}
+.mj-act.is-like{color:#ff7aa2}
+.mj-act.is-fav{color:#ffce56}
+.mj-topics{display:flex;flex-wrap:wrap;gap:11px;margin-bottom:26px}
+.mj-topic{
+  display:inline-flex;align-items:center;gap:8px;font-size:13px;color:#cfe0ff;
+  background:rgba(124,92,255,.12);border:1px solid rgba(124,92,255,.32);
+  padding:7px 16px;border-radius:99px;transition:.22s;cursor:pointer;
+}
+.mj-topic:hover{background:rgba(124,92,255,.24);transform:translateY(-2px)}
+.mj-topic b{font-size:11px;color:var(--mj-mint);font-weight:700}
+.mj-creators{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.mj-creator{
+  background:var(--mj-card);border:1px solid var(--mj-line);border-radius:var(--mj-radius);
+  padding:22px 18px;text-align:center;transition:.26s;cursor:pointer;
+}
+.mj-creator:hover{transform:translateY(-4px);border-color:rgba(124,92,255,.5);background:var(--mj-card2)}
+.mj-creator-ava{
+  width:60px;height:60px;border-radius:50%;margin:0 auto 13px;display:grid;place-items:center;
+  font-size:22px;font-weight:800;color:#04101f;box-shadow:0 0 0 3px rgba(56,189,248,.18);
+}
+.mj-creator h3{font-size:15px;color:#fff;font-weight:700;margin-bottom:4px}
+.mj-creator-role{font-size:11.8px;color:var(--mj-neon);margin-bottom:10px;letter-spacing:.4px}
+.mj-creator p{font-size:12.4px;color:var(--mj-sub);line-height:1.62;margin-bottom:12px}
+.mj-creator-nums{display:flex;justify-content:center;gap:16px;font-size:11.5px;color:var(--mj-dim)}
+.mj-creator-nums b{display:block;color:#e8eefc;font-size:14px;font-weight:700}
+.mj-specials{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.mj-special{
+  background:linear-gradient(160deg,var(--mj-card2),var(--mj-card));
+  border:1px solid var(--mj-line);border-radius:var(--mj-radius);overflow:hidden;
+  transition:.26s;
+}
+.mj-special:hover{border-color:rgba(53,224,161,.45);transform:translateY(-4px)}
+.mj-special img{width:100%;aspect-ratio:16/9;object-fit:cover}
+.mj-special-body{padding:16px 18px 18px}
+.mj-special-body h3{font-size:15.5px;color:#fff;margin-bottom:6px;font-weight:700}
+.mj-special-body p{font-size:12.8px;color:var(--mj-sub);margin-bottom:11px}
+.mj-status{
+  display:inline-flex;align-items:center;gap:6px;font-size:11.5px;
+  color:var(--mj-mint);background:rgba(53,224,161,.1);border:1px solid rgba(53,224,161,.28);
+  padding:3px 10px;border-radius:99px;
+}
+.mj-status::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--mj-mint);animation:mjPulse 1.8s infinite}
+@keyframes mjPulse{0%,100%{opacity:1}50%{opacity:.3}}
+.mj-wall{display:grid;grid-template-columns:repeat(6,1fr);gap:14px}
+.mj-wall-item{
+  position:relative;border-radius:12px;overflow:hidden;border:1px solid var(--mj-line);
+  cursor:pointer;background:var(--mj-card);
+}
+.mj-wall-item img{width:100%;height:100%;object-fit:cover;transition:.4s}
+.mj-wall-item:hover img{transform:scale(1.08)}
+.mj-wall-item span{
+  position:absolute;left:0;right:0;bottom:0;font-size:11.5px;color:#fff;padding:14px 10px 8px;
+  background:linear-gradient(180deg,transparent,rgba(5,10,24,.9));
+}
+.mj-wall-item.w2{grid-column:span 2}
+.mj-wall-item.h2{grid-row:span 2}
+.mj-wall-item.w2.h2 img{aspect-ratio:16/10}
+.mj-wall-item.w1 img{aspect-ratio:1/1}
+.mj-wall-item.w2:not(.h2) img{aspect-ratio:16/9}
+.mj-reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.mj-review{
+  background:var(--mj-card);border:1px solid var(--mj-line);border-radius:14px;
+  padding:20px;position:relative;transition:.24s;
+}
+.mj-review:hover{border-color:rgba(56,189,248,.4);transform:translateY(-3px)}
+.mj-review::before{
+  content:"“";position:absolute;right:18px;top:2px;font-size:52px;color:rgba(56,189,248,.16);
+  font-family:Georgia,serif;line-height:1;
+}
+.mj-review p{font-size:13.4px;color:#c8d4ec;margin-bottom:14px;line-height:1.72}
+.mj-review-who{display:flex;align-items:center;gap:9px;font-size:12px;color:var(--mj-dim)}
+.mj-review-who b{color:#e8eefc;font-weight:600;font-size:12.8px}
+.mj-updates{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.mj-update{
+  display:grid;grid-template-columns:74px 1fr;gap:14px;align-items:start;
+  background:var(--mj-card);border:1px solid var(--mj-line);border-radius:13px;
+  padding:16px 18px;transition:.22s;
+}
+.mj-update:hover{border-color:rgba(124,92,255,.45);background:var(--mj-card2)}
+.mj-update-date{font-size:12px;color:var(--mj-neon);font-weight:700;line-height:1.4}
+.mj-update-date small{display:block;color:var(--mj-dim);font-weight:400;font-size:11px}
+.mj-update h3{font-size:14px;color:#fff;margin-bottom:4px;font-weight:600}
+.mj-update p{font-size:12.5px;color:var(--mj-sub)}
+.mj-partners{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+.mj-partner{
+  font-size:13px;color:var(--mj-sub);border:1px dashed rgba(120,160,255,.28);
+  padding:9px 22px;border-radius:11px;letter-spacing:.5px;transition:.22s;
+}
+.mj-partner:hover{color:var(--mj-neon);border-color:rgba(56,189,248,.5);border-style:solid}
+.mj-faq{display:grid;gap:11px;max-width:860px;margin:0 auto}
+.mj-faq details{
+  background:var(--mj-card);border:1px solid var(--mj-line);border-radius:12px;
+  padding:0 20px;transition:.22s;
+}
+.mj-faq details[open]{border-color:rgba(56,189,248,.42);background:var(--mj-card2)}
+.mj-faq summary{
+  list-style:none;cursor:pointer;padding:16px 0;font-size:14.2px;color:#e8eefc;
+  font-weight:600;display:flex;align-items:center;justify-content:space-between;gap:14px;
+}
+.mj-faq summary::-webkit-details-marker{display:none}
+.mj-faq summary::after{
+  content:"+";font-size:20px;color:var(--mj-neon);font-weight:400;transition:.24s;flex:0 0 auto;
+}
+.mj-faq details[open] summary::after{transform:rotate(45deg)}
+.mj-faq details p{font-size:13.4px;color:var(--mj-sub);padding:0 0 17px;line-height:1.78}
+.mj-contact{
+  display:grid;grid-template-columns:1fr 1fr;gap:20px;
+  background:linear-gradient(150deg,rgba(27,40,71,.92),rgba(17,26,49,.8));
+  border:1px solid var(--mj-line);border-radius:20px;padding:34px 36px;
+  box-shadow:var(--mj-shadow);
+}
+.mj-contact h2{font-size:23px;margin-bottom:12px;color:#fff;font-weight:800}
+.mj-contact p{font-size:14px;color:var(--mj-sub);margin-bottom:18px}
+.mj-contact-list{display:grid;gap:11px;font-size:13.5px;color:#c8d4ec}
+.mj-contact-list li{display:flex;gap:10px;align-items:flex-start}
+.mj-contact-list b{color:var(--mj-neon);font-weight:600;flex:0 0 auto}
+.mj-inputrow{display:flex;gap:9px;margin-bottom:11px}
+.mj-inputrow input,.mj-field{
+  flex:1 1 auto;background:rgba(11,16,32,.7);border:1px solid var(--mj-line);
+  border-radius:10px;padding:10px 14px;color:var(--mj-text);font-size:13.5px;outline:none;
+  font-family:inherit;width:100%;transition:.22s;
+}
+.mj-inputrow input:focus,.mj-field:focus{border-color:rgba(56,189,248,.55);box-shadow:0 0 0 3px rgba(56,189,248,.1)}
+textarea.mj-field{resize:vertical;min-height:84px;line-height:1.7}
+.mj-foot{
+  margin-top:30px;border-top:1px solid var(--mj-line);
+  background:linear-gradient(180deg,transparent,rgba(17,26,49,.7));
+  padding:38px 0 26px;
+}
+.mj-foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:30px;margin-bottom:26px}
+.mj-foot h4{font-size:13.5px;color:#fff;margin-bottom:13px;font-weight:700;letter-spacing:.5px}
+.mj-foot p,.mj-foot li{font-size:12.8px;color:var(--mj-dim);line-height:1.9}
+.mj-foot li a:hover{color:var(--mj-neon)}
+.mj-foot-brand{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.mj-foot-bottom{
+  border-top:1px solid var(--mj-line);padding-top:18px;
+  display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;
+  font-size:12px;color:var(--mj-dim);
+}
+.mj-toast{
+  position:fixed;left:50%;bottom:34px;transform:translate(-50%,20px);
+  background:rgba(20,30,54,.97);border:1px solid rgba(56,189,248,.45);
+  color:#e8eefc;font-size:13px;padding:11px 22px;border-radius:11px;
+  opacity:0;pointer-events:none;transition:.28s;z-index:300;
+  box-shadow:0 14px 34px rgba(0,0,0,.5);
+}
+.mj-toast.is-show{opacity:1;transform:translate(-50%,0)}
+.mj-top{
+  position:fixed;right:24px;bottom:28px;width:46px;height:46px;border-radius:13px;
+  background:linear-gradient(135deg,var(--mj-neon),var(--mj-neon2));color:#04101f;
+  display:grid;place-items:center;font-size:19px;font-weight:800;
+  box-shadow:0 12px 26px rgba(56,189,248,.4);z-index:200;
+  opacity:0;pointer-events:none;transform:translateY(12px);transition:.28s;
+}
+.mj-top.is-show{opacity:1;pointer-events:auto;transform:translateY(0)}
+.mj-modal{
+  position:fixed;inset:0;z-index:400;display:none;place-items:center;padding:20px;
+  background:rgba(4,8,18,.78);backdrop-filter:blur(6px);
+}
+.mj-modal.is-open{display:grid}
+.mj-modal-box{
+  width:min(460px,100%);background:var(--mj-card2);border:1px solid var(--mj-line);
+  border-radius:18px;padding:26px 26px 22px;box-shadow:var(--mj-shadow);
+}
+.mj-modal-box h3{font-size:18px;color:#fff;margin-bottom:8px;font-weight:700}
+.mj-modal-box p{font-size:13.4px;color:var(--mj-sub);margin-bottom:16px}
+.mj-modal-close{float:right;font-size:20px;color:var(--mj-dim);line-height:1}
+.mj-modal-close:hover{color:#fff}
+.mj-search-hint{
+  display:none;margin-top:16px;font-size:13px;color:var(--mj-mint);
+  background:rgba(53,224,161,.09);border:1px solid rgba(53,224,161,.3);
+  border-radius:11px;padding:10px 16px;
+}
+.mj-search-hint.is-show{display:block}
+@media(max-width:1024px){
+  .mj-hero-grid{grid-template-columns:1fr;gap:34px}
+  .mj-focus-grid{grid-template-columns:1fr}
+  .mj-video-grid{grid-template-columns:repeat(2,1fr)}
+  .mj-creators{grid-template-columns:repeat(2,1fr)}
+  .mj-specials{grid-template-columns:1fr 1fr}
+  .mj-reviews{grid-template-columns:1fr 1fr}
+  .mj-wall{grid-template-columns:repeat(4,1fr)}
+  .mj-foot-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:760px){
+  :root{--mj-head-h:60px}
+  .mj-nav{
+    position:fixed;left:0;right:0;top:calc(var(--mj-annc-h) + var(--mj-head-h));
+    background:rgba(11,16,32,.98);border-bottom:1px solid var(--mj-line);
+    flex-direction:column;padding:12px 4vw 18px;gap:3px;display:none;
+    max-height:calc(100vh - var(--mj-annc-h) - var(--mj-head-h));overflow:auto;
+  }
+  .mj-nav.is-open{display:flex}
+  .mj-burger{display:block}
+  .mj-search{display:none}
+  .mj-head .mj-wrap{gap:12px;justify-content:space-between}
+  .mj-logo{margin-right:auto}
+  .mj-video-grid,.mj-creators,.mj-specials,.mj-reviews,.mj-updates,.mj-contact{grid-template-columns:1fr}
+  .mj-wall{grid-template-columns:repeat(2,1fr)}
+  .mj-wall-item.w2{grid-column:span 2}
+  .mj-intro-box{padding:26px 22px}
+  .mj-contact{padding:26px 22px}
+  .mj-foot-grid{grid-template-columns:1fr 1fr;gap:22px}
+  .mj-toast{width:min(88vw,340px);text-align:center}
+  .mj-top{right:16px;bottom:18px}
+  .mj-hero{padding:38px 0 30px}
+  .mj-stats{gap:22px}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<!-- 公告条 -->
+<div class="mj-annc" id="mjAnnc">
+  <div class="mj-wrap">
+    <span class="mj-annc-tag">官方公告</span>
+    <div class="mj-annc-track">
+      <span>「磁力种子索引规范 2.0」已上线，新增 <b>创作者投稿审核</b> 与<b>资源健康度标识</b></span>
+      <span>2026 冬季「深度资源发现计划」开启，<b>报名截止 12 月 12 日</b></span>
+      <span>磁极视界企业官网新增 <b>内容生态白皮书（2026 版）</b>，可在联系页申请获取</span>
+      <span>官方创作者扶持通道开放，原创内容上传即享 <b>高清码率优先分发</b></span>
+      <span>「磁力种子索引规范 2.0」已上线，新增 <b>创作者投稿审核</b> 与<b>资源健康度标识</b></span>
+      <span>2026 冬季「深度资源发现计划」开启，<b>报名截止 12 月 12 日</b></span>
+      <span>磁极视界企业官网新增 <b>内容生态白皮书（2026 版）</b>，可在联系页申请获取</span>
+      <span>官方创作者扶持通道开放，原创内容上传即享 <b>高清码率优先分发</b></span>
+    </div>
+  </div>
+</div>
+
+<!-- 页头 -->
+<header class="mj-head">
+  <div class="mj-wrap">
+    <a class="mj-logo" href="#mjHome">
+      <span class="mj-logo-mark">磁</span>
+      <span class="mj-logo-txt">磁极视界<em>·</em></span>
+    </a>
+    <nav class="mj-nav" id="mjNav" aria-label="主导航">
+      <a href="#mjHome" class="is-active">首页</a>
+      <a href="#mjFocus">焦点内容</a>
+      <a href="#mjFeed">视频流</a>
+      <a href="#mjSpecial">专题企划</a>
+      <a href="#mjCreator">创作者</a>
+      <a href="#mjUpdate">企业动态</a>
+      <a href="#mjFaq">帮助中心</a>
+      <a href="#mjContact">联系我们</a>
+    </nav>
+    <div class="mj-search">
+      <input type="search" id="mjSearchInput" placeholder="搜索磁力链接、资源或创作者" aria-label="站内搜索">
+      <button type="button" id="mjSearchBtn">搜索</button>
+    </div>
+    <button class="mj-burger" id="mjBurger" aria-label="展开导航" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+<!-- 首屏 -->
+<section class="mj-hero" id="mjHome">
+  <div class="mj-wrap mj-hero-grid">
+    <div class="mj-hero-copy">
+      <span class="mj-badge">磁极视界 · 官方网站 · 品牌自营</span>
+      <h1>磁力搜索磁力链接</h1>
+      <p class="mj-hero-alias">MAGNET DISCOVERY · 资源发现与内容社区</p>
+      <p class="mj-hero-lead">
+        作为国内深耕资源发现领域的企业，磁极视界致力于为创作者与企业搭建
+        <strong>高品质内容生态</strong>：以磁力搜索磁力链接为核心能力，提供高清资源索引、
+        正版内容合作与专业创作者社区，让每一次检索都指向可信赖的精品内容。
+      </p>
+      <div class="mj-hero-btns">
+        <a class="mj-btn mj-btn-primary" href="#mjFeed">进入内容生态</a>
+        <a class="mj-btn mj-btn-ghost" href="#mjIntro">了解品牌故事</a>
+        <button class="mj-btn mj-btn-ghost" type="button" data-mj-open="submit">创作者投稿</button>
+      </div>
+      <div class="mj-stats">
+        <div>
+          <div class="mj-stat-num">2.4<s>万</s></div>
+          <div class="mj-stat-label">原创资源索引条目</div>
+        </div>
+        <div>
+          <div class="mj-stat-num">380<s>位</s></div>
+          <div class="mj-stat-label">认证创作者</div>
+        </div>
+        <div>
+          <div class="mj-stat-num">92<s>%</s></div>
+          <div class="mj-stat-label">资源健康度口碑</div>
+        </div>
+      </div>
+    </div>
+    <div class="mj-hero-visual">
+      <div class="mj-hero-img">
+        <span class="mj-hero-tag">品牌主视觉 · 2026</span>
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 550'%3E%3Cdefs%3E%3ClinearGradient id='g1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%230b1730'/%3E%3Cstop offset='0.55' stop-color='%23163a6e'/%3E%3Cstop offset='1' stop-color='%23122a52'/%3E%3C/linearGradient%3E%3ClinearGradient id='g2' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%2338bdf8'/%3E%3Cstop offset='1' stop-color='%237c5cff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='550' fill='url(%23g1)'/%3E%3Cg stroke='%2338bdf8' stroke-opacity='0.16'%3E%3Cpath d='M0 110h800M0 220h800M0 330h800M0 440h800'/%3E%3Cpath d='M110 0v550M240 0v550M400 0v550M560 0v550M700 0v550'/%3E%3C/g%3E%3Ccircle cx='400' cy='268' r='128' fill='none' stroke='url(%23g2)' stroke-width='2.4' stroke-opacity='0.85'/%3E%3Ccircle cx='400' cy='268' r='86' fill='none' stroke='%2335e0a1' stroke-width='1.6' stroke-dasharray='7 11' stroke-opacity='0.8'/%3E%3Cpath d='M400 196v84l58 34' stroke='%2338bdf8' stroke-width='4' fill='none' stroke-linecap='round'/%3E%3Ccircle cx='400' cy='268' r='7' fill='%2335e0a1'/%3E%3Cg fill='%23e8eefc' font-family='sans-serif'%3E%3Ctext x='60' y='80' font-size='15' opacity='0.62' letter-spacing='4'%3EMAGNET DISCOVERY NETWORK%3C/text%3E%3Ctext x='60' y='486' font-size='24' font-weight='bold' opacity='0.92'%3E磁极视界 内容生态中枢%3C/text%3E%3Ctext x='60' y='516' font-size='13' opacity='0.55' letter-spacing='1.4'%3EINDEX · CURATE · CONNECT%3C/text%3E%3C/g%3E%3Cg fill='%2338bdf8' opacity='0.9'%3E%3Ccircle cx='640' cy='112' r='4'/%3E%3Ccircle cx='690' cy='152' r='3'/%3E%3Ccircle cx='612' cy='430' r='3.6'/%3E%3C/g%3E%3C/svg%3E"
+             alt="磁极视界品牌主视觉：深蓝网格中的磁力资源索引中枢">
+      </div>
+      <div class="mj-hero-float">
+        <b>+126</b>
+        <span>本周新增<br>认证创作者</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 品牌深度解析 -->
+<section class="mj-section" id="mjIntro">
+  <div class="mj-wrap">
+    <div class="mj-intro-box">
+      <h2>关于「磁力搜索磁力链接」：一个持续运营的资源发现品牌</h2>
+      <div class="mj-intro-cols">
+        <p>磁极视界成立于 2019 年，是一家专注于<strong>磁力搜索磁力链接</strong>技术与内容生态服务的企业。我们以“让发现更可信”为使命，围绕资源索引、内容审核、创作者社区与品牌合作四条主线，构建了覆盖检索、浏览、收藏、投稿、分享的完整产品链路。作为<strong>官方网站</strong>，本页是品牌公开展示的窗口，也是创作者与用户了解我们价值观的第一站。</p>
+        <p>在过去七年里，磁力搜索磁力链接这个行业经历了从“数量优先”到“品质优先”的转变。早期用户关心的是“能不能搜到”，现在用户更关心“搜到的东西是否<strong>正版、高清、健康</strong>”。磁极视界坚持“<strong>用户至上</strong>”的产品原则：每一条进入索引的资源都需要通过来源校验、内容分级与健康度评估三重流程；每位认证创作者都需完成实名与原创承诺；每个专题都需经过编辑团队审核后才对外发布。</p>
+        <h3>一、我们在做什么：从检索工具到内容生态</h3>
+        <p>磁力搜索磁力链接在外界看来是一项工具型能力——输入一串字符，返回一组结果。但在磁极视界的产品定义里，它更像一座<strong>内容生态</strong>的入口。用户在搜索框里键入的不只是检索词，还有需求、兴趣和信任。因此我们把产品拆成三层：底层是稳定、合规的索引引擎，中层是人工与算法协同的内容审核体系，顶层是围绕创作者、专题、榜单与社区互动的表达空间。</p>
+        <p>我们搭建了“资源健康度”评价模型，从来源可信度、文件完整度、社区口碑、更新响应速度四个维度为每条索引打分，并以可视化标识呈现给用户。这个模型运行三年，已经帮助超过两百万次检索避开了失效与低质资源。对行业来说，这是一次从小工具到<strong>专业平台</strong>的升级；对用户来说，这是一份可感知的<strong>品质</strong>承诺。</p>
+        <h3>二、创作者为什么选择我们</h3>
+        <p>磁力搜索磁力链接行业长期面临一个难题：优质内容的表达空间被压缩，创作者缺少稳定的分发渠道。磁极视界给出的答案是“内容生态共建”：我们为创作者提供选题策划、剪辑指导、版权咨询、流量扶持与商业对接五类支持，并定期发布《内容生态白皮书》，公开平台规则与数据表现。目前平台已聚集 380 位认证创作者，覆盖知识科普、深度测评、城市探索、手作 DIY、影视解读、音乐现场等十余个<strong>垂直领域</strong>。</p>
+        <p>我们相信，<strong>匠心</strong>不是口号，而是可被量化的坚持。平台设有“年度精品内容评选”，评审维度包括信息密度、表达原创性、观众留存与社区反馈，获奖作品会进入官方精选库并获得长期推荐。对创作者而言，这是荣誉，也是对<strong>原创</strong>的尊重；对用户而言，这是筛选优质内容的可靠参考。</p>
+        <h3>三、我们的技术底色与社会责任</h3>
+        <p>磁力搜索磁力链接看似简单，背后是庞大的数据处理工程。我们的索引服务每天处理数千万级检索请求，采用分布式爬取策略与智能去重算法，在保证响应速度的同时降低冗余。审核侧引入多模态识别能力，对文本、图像与元数据进行联合判断，将明显违规内容拦截在进入索引之前。我们也建立了用户举报快速响应通道，平均处理时长控制在 6 小时以内。</p>
+        <p>作为一家<strong>持续运营</strong>的企业，我们清楚技术能力越大，<strong>社会责任</strong>越重。磁极视界每年投入固定比例的资源用于内容安全治理与创作者教育，并面向高校与行业伙伴开放合规课程。我们希望磁力搜索磁力链接这一品类，在公众认知里与“可靠”“清晰”“有边界”绑定，而不是与灰色地带绑定。</p>
+        <h3>四、面向未来：多元、包容、一起成长</h3>
+        <p>2026 年，我们把品牌关键词定为“<strong>成长</strong>”与“<strong>陪伴</strong>”。成长指向平台：继续打磨索引质量，扩展原创内容比例，完善创作者成长体系；陪伴指向用户：让每一次检索体验更稳定、更温暖、更少干扰。我们同时启动了“深度资源发现计划”，鼓励创作者围绕真实生活、在地文化与行业观察产出长内容——因为好的资源发现，最终服务于好的内容理解。</p>
+        <p>磁力搜索磁力链接不该只是一个输入框。它可以是知识的起点、兴趣的入口、同好的聚点。欢迎你通过这个<strong>官方网站</strong>了解我们，也欢迎以创作者、合作方或普通用户的身份，加入磁极视界的内容生态。我们相信<strong>真实</strong>与<strong>温暖</strong>的力量，也相信持续积累的微小改进，会构成一个值得信赖的品牌。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 焦点内容 -->
+<section class="mj-section" id="mjFocus">
+  <div class="mj-wrap">
+    <div class="mj-sec-head">
+      <div class="mj-kicker">Featured</div>
+      <h2>焦点内容 · 编辑部本周推荐</h2>
+      <p>由磁极视界编辑团队从磁力搜索磁力链接索引库中精选，兼顾信息密度与观看体验。</p>
+      <div class="mj-sec-line"></div>
+    </div>
+    <div class="mj-focus-grid">
+      <article class="mj-focus-main">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 720 450'%3E%3Cdefs%3E%3ClinearGradient id='f1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%230d1b33'/%3E%3Cstop offset='1' stop-color='%231b3f6b'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='720' height='450' fill='url(%23f1)'/%3E%3Cg stroke='%2338bdf8' stroke-opacity='0.3' fill='none'%3E%3Cpath d='M90 330c0-80 62-145 140-145s140 65 140 145' stroke-width='2'/%3E%3Cpath d='M150 330c0-50 36-90 80-90s80 40 80 90' stroke-width='2'/%3E%3Cpath d='M0 372h720' stroke-width='1.4'/%3E%3C/g%3E%3Cg fill='%2335e0a1'%3E%3Ccircle cx='230' cy='330' r='8'/%3E%3C/g%3E%3Cg fill='%23e8eefc' font-family='sans-serif'%3E%3Ctext x='52' y='72' font-size='13' letter-spacing='4' opacity='0.6'%3EEXPLORE ARCHIVE%3C/text%3E%3Ctext x='52' y='112' font-size='27' font-weight='bold'%3E资源索引的秩序感%3C/text%3E%3Ctext x='52' y='142' font-size='13' opacity='0.6'%3E从一条链接开始的深度发现之旅%3C/text%3E%3C/g%3E%3Cg transform='translate(560 92)'%3E%3Ccircle r='46' fill='none' stroke='%2338bdf8' stroke-width='2'/%3E%3Cpath d='M-8 -14l30 14-30 14z' fill='%2338bdf8'/%3E%3C/g%3E%3Cg opacity='0.5' fill='%237c5cff'%3E%3Crect x='480' y='300' width='190' height='8' rx='4'/%3E%3Crect x='480' y='322' width='130' height='8' rx='4'/%3E%3C/g%3E%3C/svg%3E"
+             alt="焦点内容封面：资源索引的秩序感，深蓝探索档案主视觉">
+        <div class="mj-focus-overlay">
+          <div class="mj-tagrow" style="margin-bottom:10px">
+            <span class="mj-tag">行业观察</span>
+            <span class="mj-tag">本周焦点</span>
+          </div>
+          <h3>资源索引的秩序感：磁力搜索磁力链接如何被重新定义</h3>
+          <p>从“能搜到”到“值得搜”，一次关于内容品质的系统性梳理。</p>
+          <div class="mj-meta">
+            <span class="mj-avatar" style="background:#38bdf8">编</span>
+            <span>磁极视界编辑部</span>
+            <span>·</span>
+            <span>2026-11-17</span>
+            <span>·</span>
+            <span>8.2 万次浏览</span>
+          </div>
+        </div>
+      </article>
+      <div class="mj-focus-side">
+        <article class="mj-focus-mini">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 208 132'%3E%3Crect width='208' height='132' fill='%2314274a'/%3E%3Cg stroke='%2335e0a1' stroke-opacity='0.55' fill='none' stroke-width='1.6'%3E%3Cpath d='M26 96l38-44 32 32 26-30 60 42'/%3E%3C/g%3E%3Cg fill='%23e8eefc' font-family='sans-serif' opacity='0.8'%3E%3Ctext x='18' y='30' font-size='10' letter-spacing='2'%3EINDEX QUALITY%3C/text%3E%3C/g%3E%3Ccircle cx='160' cy='42' r='13' fill='%2335e0a1' opacity='0.85'/%3E%3C/svg%3E"
+               alt="资源健康度模型解读视频封面，绿色折线走势图">
+          <div>
+            <h4>资源健康度模型 3.0：四条指标背后的取舍</h4>
+            <span>深度测评 · 12 分钟</span>
+          </div>
+        </article>
+        <article class="mj-focus-mini">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 208 132'%3E%3Crect width='208' height='132' fill='%23241242'/%3E%3Cg fill='none' stroke='%237c5cff' stroke-width='2'%3E%3Ccircle cx='62' cy='66' r='26'/%3E%3Ccircle cx='146' cy='66' r='14'/%3E%3Cpath d='M88 66h44'/%3E%3C/g%3E%3Cg fill='%23e8eefc' font-family='sans-serif' opacity='0.75'%3E%3Ctext x='16' y='26' font-size='10' letter-spacing='2'%3ECREATOR TALK%3C/text%3E%3C/g%3E%3C/svg%3E"
+               alt="人物访谈视频封面，紫色双圆连接的创作者对谈构图">
+          <div>
+            <h4>和三位索引整理者聊聊“长期主义”</h4>
+            <span>人物访谈 · 24 分钟</span>
+          </div>
+        </article>
+        <article class="mj-focus-mini">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 208 132'%3E%3Crect width='208' height='132' fill='%230f2b2a'/%3E%3Cg stroke='%2335e0a1' stroke-opacity='0.6' fill='none'%3E%3Cpath d='M0 104c40-26 68-26 104 0s70 26 104 0' stroke-width='2'/%3E%3Cpath d='M0 118c40-26 68-26 104 0s70 26 104 0' stroke-width='1.2' opacity='0.5'/%3E%3C/g%3E%3Cg fill='%23e8eefc' font-family='sans-serif' opacity='0.8'%3E%3Ctext x='16' y='30' font-size='10' letter-spacing='2'%3ECITY WALK%3C/text%3E%3C/g%3E%3Crect x='150' y='16' width='40' height='40' rx='8' fill='none' stroke='%2338bdf8'/%3E%3C/svg%3E"
+               alt="城市探索视频封面，青绿色波纹与城市剪影">
+          <div>
+            <h4>城市探索：在旧书市里找一条资源的源头</h4>
+            <span>城市探索 · 17 分钟</span>
+          </div>
+        </article>
+        <article class="mj-focus-mini">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 208 132'%3E%3Crect width='208' height='132' fill='%232b1c14'/%3E%3Cg fill='%23ffb86b'%3E%3Crect x='28' y='70' width='16' height='38' rx='3'/%3E%3Crect x='54' y='54' width='16' height='54' rx='3'/%3E%3Crect x='80' y='62' width='16' height='46' rx='3'/%3E%3Crect x='106' y='42' width='16' height='66' rx='3'/%3E%3Crect x='132' y='66' width='16' height='42' rx='3'/%3E%3C/g%3E%3Cg fill='%23e8eefc' font-family='sans-serif' opacity='0.8'%3E%3Ctext x='16' y='28' font-size='10' letter-spacing='2'%3EDATA RANK%3C/text%3E%3C/g%3E%3C/svg%3E"
+               alt="数据榜单视频封面，琥珀色柱状图排行视觉">
+          <div>
+            <h4>11 月口碑榜：搜索热度与满意度交叉解读</h4>
+            <span>数据榜单 · 9 分钟</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 视频流 -->
+<section class="mj-section" id="mjFeed">
+  <div class="mj-wrap">
+    <div class="mj-sec-head">
+      <div class="mj-kicker">Content Feed</div>
+      <h2>热门视频流 · 磁力搜索磁力链接相关精品内容</h2>
+      <p>涵盖教程干货、深度测评、创作幕后与生活方式，均为平台原创或官方授权合作内容。</p>
+      <div class="mj-sec-line"></div>
+    </div>
+    <div class="mj-topics">
+      <span class="mj-topic" data-mj-topic="资源整理"># 资源整理攻略 <b>1.8k</b></span>
+      <span class="mj-topic" data-mj-topic="索引科普"># 索引科普 <b>1.2k</b></span>
+      <span class="mj-topic" data-mj-topic="创作者幕后"># 创作者幕后 <b>986</b></span>
+      <span class="mj-topic" data-mj-topic="深度测评"># 深度测评 <b>742</b></span>
+      <span class="mj-topic" data-mj-topic="城市影像"># 城市影像 <b>653</b></span>
+      <span class="mj-topic" data-mj-topic="手作日常"># 手作日常 <b>521</b></span>
+    </div>
+    <div class="mj-search-hint" id="mjSearchHint"></div>
+    <div class="mj-video-grid" id="mjVideoGrid">
+
+      <article class="mj-card" data-mj-card data-mj-keywords="资源整理 索引 教程 磁力搜索">
+        <div class="mj-cover">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 270'%3E%3Cdefs%3E%3ClinearGradient id='v1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%230b1c38'/%3E%3Cstop offset='1' stop-color='%231f4f82'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='480' height='270' fill='url(%23v1)'/%3E%3Cg stroke='%2338bdf8' stroke-opacity='0.45' fill='none'%3E%3Crect x='60' y='70' width='150' height='104' rx='8' stroke-width='2'/%3E%3Cpath d='M232 122h56M288 122l-14-12M288 122l-14 12' stroke-width='2'/%3E%3Crect x='300' y='70' width='120' height='104' rx='8' stroke-width='2'/%3E%3C/g%3E%3Cg fill='%23e8eefc' font-family='sans-serif'%3E%3Ctext x='24' y='40' font-size='12' letter-spacing='3' opacity='0.62'%3ETUTORIAL 01%3C/text%3E%3Ctext x='24' y='228' font-size='15' font-weight='bold' opacity='0.92'%3E整理一份可复用的资源清单%3C/text%3E%3C/g%3E%3Cg fill='%2335e0a1'%3E%3Ccircle cx='88' cy='98' r='4'/%3E%3Ccircle cx='404' cy='98' r='4'/%3E%3C/g%3E%3C/svg%3E"
+               alt="教程封面：整理一份可复用的磁力资源清单，双窗口流程图">
+          <span class="mj-cover-tag">教程干货</span>
+          <span class="mj-cover-dur">11:42</span>
+          <div class="mj-cover-play"><i>▶</i></div>
+        </div>
+        <div class="mj-card-body">
+          <h3>整理一份可复用的资源清单：磁力链接归档方法论</h3>
+          <p>从命名规则到标签体系，一套适合长期使用的本地归档流程，附模板下载。</p>
+          <div class="mj-meta">
+            <span class="mj-avatar" style="background:#38bdf8">林</span>
+            <span>林间索引</span>
+            <span>·</span>
+            <span>3.4 万播放</span>
+          </div>
+          <div class="mj-card-actions">
+            <button class="mj-act" data-mj-like>♡ 赞 328</button>
+            <button class="mj-act" data-mj-fav>☆ 收藏</button>
+            <button class="mj-act" data-mj-share>↗ 分享</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="mj-card" data-mj-card data-mj-keywords="深度测评 磁力搜索 平台 对比">
+        <div class="mj-cover">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 270'%3E%3Crect width='480' height='270' fill='%23121929'/%3E%3Cg fill='none' stroke='%237c5cff' stroke-width='2'%3E%3Ccircle cx='150' cy='140' r='62'/%3E%3Ccircle cx='330' cy='140' r='62'/%3E%3C/g%3E%3Cg fill='%23e8eefc' font-family='sans-serif'%3E%3Ctext x='24' y='38' font-size='12' letter-spacing='3' opacity='0.6'%3EREVIEW 02%3C/text%3E%3Ctext x='150' y='146' font-size='20' font-weight='bold' text-anchor='middle'%3EA%3C/text%3E%3Ctext x='330' y='146' font-size='20' font-weight='bold' text-anchor='middle'%3EB%3C/text%3E%3Ctext x='24' y='228' font-size='15' font-weight='bold' opacity='0.92'%3E六项指标横向对比实测%3C/text%3E%3C/g%3E%3Cg stroke='%2338bdf8' stroke-width='1.4' opacity='0.6'%3E%3Cpath d='M212 140h56'/%3E%3C/g%3E%3C/svg%3E"
+               alt="测评封面：两类检索方案六项指标横向对比，双圆结构图">
+          <span class="mj-cover-tag">深度测评</span>
+          <span class="mj-cover-dur">18:07</span>
+          <div class="mj-cover-play"><i>▶</i></div>
+        </div>
+        <div class="mj-card-body">
+          <h3>两种检索思路的六项指标横评：速度、命中率与可信度</h3>
+          <p>用同一组检索词做对照实验，记录三周的稳定性数据与真实使用感受。</p>
+          <div class="mj-meta">
+            <span class="mj-avatar" style="background:#7c5cff">测</span>
+            <span>实测研究所</span>
+            <span>·</span>
+            <span>5.1 万播放</span>
+          </div>
+          <div class="mj-card-actions">
+            <button class="mj-act" data-mj-like>♡ 赞 512</button>
+            <button class="mj-act" data-mj-fav>☆ 收藏</button>
+            <button class="mj-act" data-mj-share>↗ 分享</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="mj-card" data-mj-card data-mj-keywords="创作者幕后 索引 编辑">
+        <div class="mj-cover">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 270'%3E%3Crect width='480' height='270' fill='%231b2a17'/%3E%3Cg stroke='%23a3d977' stroke-opacity='0.55' fill='none' stroke-width='1.6'%3E%3Cpath d='M60 210V120M120 210V90M180 210V140M240 210V70M300 210V110M360 210V96M420 210V150'/%3E%3C/g%3E%3Cg fill='%2335e0a1'%3E%3Crect x='52' y='120' width='16' height='90' rx='4'/%3E%3Crect x='112' y='90' width='16' height='120' rx='4'/%3E%3Crect x='172' y='140' width='16' height='70' rx='4'/%3E%3Crect x='232' y='70' width='16' height='140' rx='4'/%3E%3C/g%3E%3Cg fill='%23e8eefc' font-family='sans-serif'%3E%3Ctext x='24' y='38' font-size='12' letter-spacing='3' opacity='0.62'%3EBEHIND SCENES%3C/text%3E%3Ctext x='24' y='244' font-size='15' font-weight='bold' opacity='0.92'%3E一天处理 3000 条索引是什么体验%3C/text%3E%3C/g%3E%3C/svg%3E"
+               alt="幕后封面：一天处理三千条索引的工作记录，绿色柱状统计图">
+          <span class="mj-cover-tag">创作幕后</span>
+          <span class="mj-cover-dur">14:20</span>
+          <div class="mj-cover-play"><i>▶</i></div>
+        </div>
+        <div class="mj-card-body">
+          <h3>一天处理 3000 条索引是什么体验：审核员工作记录</h3>
+          <p>跟拍内容审核团队的完整工作日，聊聊标准、边界与那些难以判断的瞬间。</p>
+          <div class="mj-meta">
+            <span class="mj-avatar" style="background:#35e0a1">幕</span>
+            <span>幕后观察站</span>
+            <span>·</span>
+            <span>2.7 万播放</span>
+          </div>
+          <div class="mj-card-actions">
+            <button class="mj-act" data-mj-like>♡ 赞 274</button>
+            <button class="mj-act" data-mj-fav>☆ 收藏</button>
+            <button class="mj-act" data-mj-share>↗ 分享</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="mj-card" data-mj-card data-mj-keywords="索引科普 磁力链接 原理">
+        <div class="mj-cover">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 270'%3E%3Crect width='480' height='270' fill='%230d2233'/%3E%3Cg fill='none' stroke='%2338bdf8' stroke-width='2'%3E%3Cpath d='M240 60l70 40v80l-70 40-70-40v-80z'/%3E%3Cpath d='M240 100l34 20v40l-34 20-34-20v-40z' stroke='%2335e0a1'/%3E%3C/g%3E%3Cg fill='%23e8eefc' font-family='sans-serif'%3E%3Ctext x='24' y='38' font-size='12' letter-spacing='3' opacity='0.6'%3ESCIENCE 04%3C/text%3E%3Ctext x='24' y='244' font-size='15' font-weight='bold' opacity='0.92'%3E一条链接里到底有什么%3C/text%3E%3C/g%3E%3Cg stroke='%2338bdf8' stroke-opacity='0.5' fill='none'%3E%3Cpath d='M60 140h84M336 140h84'/%3E%3C/g%3E%3Ccircle cx='60' cy='140' r='6' fill='%237c5cff'/%3E%3Ccircle cx='420' cy='140' r='6' fill='%237c5cff'/%3E%3C/svg%3E"
+               alt="科普封面：一条磁力链接的结构解析，六边形嵌套示意">
+          <span class="mj-cover-tag">知识科普</span>
+          <span class="mj-cover-dur">08:55</span>
+          <div class="mj-cover-play"><i>▶</i></div>
+        </div>
+        <div class="mj-card-body">
+          <h3>一条链接里到底有什么：磁力链接结构拆解入门</h3>
+          <p>用可视化方式讲解哈希、参数与元信息的区别，零基础也能看懂。</p>
+          <div class="mj-meta">
+            <span class="mj-avatar" style="background:#38bdf8">科</span>
+            <span>科普小站</span>
+            <span>·</span>
+            <span>6.8 万播放</span>
+          </div>
+          <div class="mj-card-actions">
+            <button class="mj-act" data-mj-like>♡ 赞 903</button>
+            <button class="mj-act" data-mj-fav>☆ 收藏</button>
+            <button class="mj-act" data-mj-share>↗ 分享</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="mj-card" data-mj-card data-mj-keywords="城市影像 城市探索 在地文化">
+        <div class="mj-cover">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 270'%3E%3Crect width='480' height='270' fill='%231b212e'/%3E%3Cg fill='%23384b66'%3E%3Crect x='40' y='150' width='52' height='90'/%3E%3Crect x='104' y='112' width='42' height='128'/%3E%3Crect x='158' y='170' width='60' height='70'/%3E%3Crect x='330' y='128' width='48' height='112'/%3E%3Crect x='390' y='160' width='56' height='80'/%3E%3C/g%3E%3Cg fill='%23ffb86b'%3E%3Crect x='112' y='126' width='8' height='10'/%3E%3Crect x='128' y='126' width='8' height='10'/%3E%3Crect x='112' y='148' width='8' height='10'/%3E%3Crect x='338' y='144' width='8' height='10'/%3E%3Crect x='354' y='144' width='8' height='10'/%3E%3C/g%3E%3Cg fill='%23e8eefc' font-family='sans-serif'%3E%3Ctext x='24' y='38' font-size='12' letter-spacing='3' opacity='0.6'%3ECITY STORY%3C/text%3E%3Ctext x='24' y='244' font-size='15' font-weight='bold' opacity='0.92'%3E城市夜归人的影像笔记%3C/text%3E%3C/g%3E%3Ccircle cx='262' cy='152' r='28' fill='none' stroke='%2338bdf8' stroke-width='2'/%3E%3C/svg%3E"
+               alt="城市影像封面：夜色中的楼群与亮灯窗口，暖橙点缀">
+          <span class="mj-cover-tag">城市探索</span>
+          <span class="mj-cover-dur">16:31</span>
+          <div class="mj-cover-play"><i>▶</i></div>
+        </div>
+        <div class="mj-card-body">
+          <h3>城市夜归人的影像笔记：三条街与四个夜晚</h3>
+          <p>以磁力资源中的老影像为线索，重走一座城市的旧街区，记录真实变化。</p>
+          <div class="mj-meta">
+            <span class="mj-avatar" style="background:#ffb86b">城</span>
+            <span>街区漫游者</span>
+            <span>·</span>
+            <span>4.3 万播放</span>
+          </div>
+          <div class="mj-card-actions">
+            <button class="mj-act" data-mj-like>♡ 赞 431</button>
+            <button class="mj-act" data-mj-fav>☆ 收藏</button>
+            <button class="mj-act" data-mj-share>↗ 分享</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="mj-card" data-mj-card data-mj-keywords="手作日常 生活方式 收纳">
+        <div class="mj-cover">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 270'%3E%3Crect width='480' height='270' fill='%23291e2c'/%3E%3Cg fill='none' stroke='%23ff9ec4' stroke-width='2'%3E%3Crect x='70' y='80' width='120' height='110' rx='10'/%3E%3Crect x='210' y='110' width='90' height='80' rx='10'/%3E%3Crect x='320' y='66' width='90' height='124' rx='10'/%3E%3C/g%3E%3Cg fill='%23ff9ec4' opacity='0.7'%3E%3Crect x='86' y='98' width='88' height='6' rx='3'/%3E%3Crect x='86' y='114' width='60' height='6' rx='3'/%3E%3Crect x='336' y='86' width='58' height='6' rx='3'/%3E%3C/g%3E%3Cg fill='%23e8eefc' font-family='sans-serif'%3E%3Ctext x='24' y='38' font-size='12' letter-spacing='3' opacity='0.62'%3EDAILY CRAFT%3C/text%3E%3Ctext x='24' y='244' font-size='15' font-weight='bold' opacity='0.92'%3E把数字收藏变成实体收纳%3C/text%3E%3C/g%3E%3C/svg%3E"
+               alt="手作封面：数字收藏与实体收纳盒的对照，粉紫色线条">
+          <span class="mj-cover-tag">生活手作</span>
+          <span class="mj-cover-dur">10:14</span>
+          <div class="mj-cover-play"><i>▶</i></div>
+        </div>
+        <div class="mj-card-body">
+          <h3>把数字收藏变成实体收纳：一次桌面改造实验</h3>
+          <p>用三个周末整理数字资产与实体空间的对应关系，附材料清单与成本表。</p>
+          <div class="mj-meta">
+            <span class="mj-avatar" style="background:#ff9ec4">手</span>
+            <span>慢手作坊</span>
+            <span>·</span>
+            <span>1.9 万播放</span>
+          </div>
+          <div class="mj-card-actions">
+            <button class="mj-act" data-mj-like>♡ 赞 198</button>
+            <button class="mj-act" data-mj-fav>☆ 收藏</button>
+            <button class="mj-act" data-mj-share>↗ 分享</button>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- 专题企划 -->
+<section class="mj-section" id="mjSpecial">
+  <div class="mj-wrap">
+    <div class="mj-sec-head">
+      <div class="mj-kicker">Projects</div>
+      <h2>专题企划 · 官方发布的长期内容项目</h2>
+      <p>每个专题由编辑团队与创作者共同策划，围绕磁力搜索磁力链接的使用场景持续更新。</p>
+      <div class="mj-sec-line"></div>
+    </div>
+    <div class="mj-specials">
+      <article class="mj-special">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 520 292'%3E%3Crect width='520' height='292' fill='%230e1f38'/%3E%3Cg stroke='%2338bdf8' stroke-opacity='0.45' fill='none' stroke-width='1.8'%3E%3Cpath d='M60 220c60-90 120-90 180 0s120 90 180 0'/%3E%3Cpath d='M60 190c60-90 120-90 180 0s120 90 180 0' stroke-opacity='0.25'/%3E%3C/g%3E%3Cg fill='%23e8eefc' font-family='sans-serif'%3E%3Ctext x='34' y='56' font-size='12' letter-spacing='3' opacity='0.6'%3EPROJECT A%3C/text%3E%3Ctext x='34' y='94' font-size='24' font-weight='bold'%3E索引素养计划%3C/text%3E%3C/g%3E%3C/svg%3E"
+             alt="专题企划封面：索引素养计划，蓝色波形长线">
+        <div class="mj-special-body">
+          <h3>索引素养计划</h3>
+          <p>面向普通用户的十二节公开课，从检索词设计到资源鉴别，建立可迁移的信息判断力。</p>
+          <span class="mj-status">更新至第 9 期 · 持续更新</span>
+        </div>
+      </article>
+      <article class="mj-special">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 520 292'%3E%3Crect width='520' height='292' fill='%23201838'/%3E%3Cg fill='none' stroke='%237c5cff' stroke-width='2'%3E%3Ccircle cx='120' cy='160' r='34'/%3E%3Ccircle cx='200' cy='130' r='22'/%3E%3Ccircle cx='270' cy='172' r='28'/%3E%3Ccircle cx='348' cy='120' r='18'/%3E%3Ccircle cx='410' cy='168' r='26'/%3E%3C/g%3E%3Cg stroke='%237c5cff' stroke-opacity='0.4'%3E%3Cpath d='M154 160h24M222 136l24 26M298 166l32-36M366 128l20 26'/%3E%3C/g%3E%3Cg fill='%23e8eefc' font-family='sans-serif'%3E%3Ctext x='34' y='56' font-size='12' letter-spacing='3' opacity='0.6'%3EPROJECT B%3C/text%3E%3Ctext x='34' y='94' font-size='24' font-weight='bold'%3E创作者共生计划%3C/text%3E%3C/g%3E%3C/svg%3E"
+             alt="专题企划封面：创作者共生计划，紫色节点连接网络">
+        <div class="mj-special-body">
+          <h3>创作者共生计划</h3>
+          <p>为垂直领域创作者提供选题共创、素材授权与商业对接，已孵化 46 个原创系列。</p>
+          <span class="mj-status">2026 冬季批次报名中</span>
+        </div>
+      </article>
+      <article class="mj-special">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 520 292'%3E%3Crect width='520' height='292' fill='%230f2a26'/%3E%3Cg stroke='%2335e0a1' stroke-width='2' fill='none'%3E%3Cpath d='M80 210l80-70 70 40 90-96 120 60'/%3E%3C/g%3E%3Cg fill='%2335e0a1'%3E%3Ccircle cx='80' cy='210' r='6'/%3E%3Ccircle cx='160' cy='140' r='6'/%3E%3Ccircle cx='230' cy='180' r='6'/%3E%3Ccircle cx='320' cy='84' r='6'/%3E%3Ccircle cx='440' cy='144' r='6'/%3E%3C/g%3E%3Cg fill='%23e8eefc' font-family='sans-serif'%3E%3Ctext x='34' y='56' font-size='12' letter-spacing='3' opacity='0.6'%3EPROJECT C%3C/text%3E%3Ctext x='34' y='94' font-size='24' font-weight='bold'%3E资源健康度公开报告%3C/text%3E%3C/g%3E%3C/svg%3E"
+             alt="专题企划封面：资源健康度公开报告，青绿色上升折线">
+        <div class="mj-special-body">
+          <h3>资源健康度公开报告</h3>
+          <p>每季度发布一次平台数据与治理进展，接受社区监督，推动行业透明化。</p>
+          <span class="mj-status">2026 Q3 报告已发布</span>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 创作者矩阵 -->
+<section class="mj-section" id="mjCreator">
+  <div class="mj-wrap">
+    <div class="mj-sec-head">
+      <div class="mj-kicker">Creators</div>
+      <h2>创作者矩阵 · 值得信赖的内容伙伴</h2>
+      <p>他们用长期投入验证了磁力搜索磁力链接内容的价值，也构成了平台的口碑基础。</p>
+      <div class="mj-sec-line"></div>
+    </div>
+    <div class="mj-creators">
+      <article class="mj-creator" data-mj-open="creator1">
+        <div class="mj-creator-ava" style="background:linear-gradient(135deg,#38bdf8,#35e0a1)">林</div>
+        <h3>林间索引</h3>
+        <div class="mj-creator-role">资源整理 · 方法论</div>
+        <p>七年归档经验，擅长把复杂流程拆成可执行步骤，作品以清晰的命名体系著称。</p>
+        <div class="mj-creator-nums">
+          <div><b>128</b>作品</div>
+          <div><b>4.6万</b>关注</div>
+        </div>
+      </article>
+      <article class="mj-creator" data-mj-open="creator2">
+        <div class="mj-creator-ava" style="background:linear-gradient(135deg,#7c5cff,#38bdf8)">实</div>
+        <h3>实测研究所</h3>
+        <div class="mj-creator-role">深度测评 · 数据</div>
+        <p>坚持自费实测与公开数据，三年来完成 96 组对照实验，被称为“最不客气的测评人”。</p>
+        <div class="mj-creator-nums">
+          <div><b>96</b>作品</div>
+          <div><b>7.2万</b>关注</div>
+        </div>
+      </article>
+      <article class="mj-creator" data-mj-open="creator3">
+        <div class="mj-creator-ava" style="background:linear-gradient(135deg,#35e0a1,#ffb86b)">幕</div>
+        <h3>幕后观察站</h3>
+        <div class="mj-creator-role">创作幕后 · 访谈</div>
+        <p>专注记录行业一线工作者，用长镜头与耐心提问，呈现平台背后的真实运行逻辑。</p>
+        <div class="mj-creator-nums">
+          <div><b>64</b>作品</div>
+          <div><b>3.1万</b>关注</div>
+        </div>
+      </article>
+      <article class="mj-creator" data-mj-open="creator4">
+        <div class="mj-creator-ava" style="background:linear-gradient(135deg,#ff9ec4,#7c5cff)">慢</div>
+        <h3>慢手作坊</h3>
+        <div class="mj-creator-role">生活方式 · 手作</div>
+        <p>用影像记录数字生活与实体空间的平衡，主张“少一点收藏，多一点使用”。</p>
+        <div class="mj-creator-nums">
+          <div><b>87</b>作品</div>
+          <div><b>2.8万</b>关注</div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 作品墙 -->
+<section class="mj-section" id="mjWall">
+  <div class="mj-wrap">
+    <div class="mj-sec-head">
+      <div class="mj-kicker">Gallery</div>
+      <h2>影像墙 · 社区作品精选</h2>
+      <p>来自磁极视界社区的真实影像记录，用画面讲述资源发现之外的生活质地。</p>
+      <div class="mj-sec-line"></div>
+    </div>
+    <div class="mj-wall">
+      <div class="mj-wall-item w2 h2">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 560 340'%3E%3Crect width='560' height='340' fill='%230d1c33'/%3E%3Cg stroke='%2338bdf8' stroke-opacity='0.4' fill='none' stroke-width='1.6'%3E%3Ccircle cx='280' cy='170' r='120'/%3E%3Ccircle cx='280' cy='170' r='78'/%3E%3Ccircle cx='280' cy='170' r='36'/%3E%3C/g%3E%3Cg fill='%23e8eefc' font-family='sans-serif'%3E%3Ctext x='30' y='52' font-size='12' letter-spacing='3' opacity='0.58'%3EARCHIVE LIGHT%3C/text%3E%3Ctext x='30' y='306' font-size='20' font-weight='bold' opacity='0.9'%3E光在索引之间%3C/text%3E%3C/g%3E%3Cg stroke='%2335e0a1' stroke-width='2'%3E%3Cpath d='M280 50v240' stroke-opacity='0.35'/%3E%3C/g%3E%3C/svg%3E"
+             alt="作品墙大图：光在索引之间，同心圆光影构图">
+        <span>光在索引之间 · 影像实验</span>
+      </div>
+      <div class="mj-wall-item w2">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 560 312'%3E%3Crect width='560' height='312' fill='%23241a2e'/%3E%3Cg fill='none' stroke='%23ff9ec4' stroke-width='2'%3E%3Cpath d='M0 240c80-70 140-70 220 0s180 70 260 0 80-40 80-40'/%3E%3C/g%3E%3Cg fill='%23e8eefc' font-family='sans-serif'%3E%3Ctext x='30' y='52' font-size='12' letter-spacing='3' opacity='0.58'%3ENIGHT WAVE%3C/text%3E%3Ctext x='30' y='280' font-size='19' font-weight='bold' opacity='0.9'%3E夜间波形速写%3C/text%3E%3C/g%3E%3C/svg%3E"
+             alt="作品墙宽图：夜间波形速写，粉色流动曲线">
+        <span>夜间波形速写</span>
+      </div>
+      <div class="mj-wall-item w1">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 260 260'%3E%3Crect width='260' height='260' fill='%23122a26'/%3E%3Cg stroke='%2335e0a1' stroke-width='1.8' fill='none'%3E%3Cpath d='M40 210V90l40 22v98zM110 210V70l40 20v120zM180 210V110l40 22v78z'/%3E%3C/g%3E%3Cg fill='%23e8eefc' font-family='sans-serif'%3E%3Ctext x='20' y='36' font-size='10' letter-spacing='2' opacity='0.55'%3EFORM%3C/text%3E%3C/g%3E%3C/svg%3E"
+             alt="作品墙小图：几何构成练习，绿色立体块面">
+        <span>几何构成</span>
+      </div>
+      <div class="mj-wall-item w1">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 260 260'%3E%3Crect width='260' height='260' fill='%231b1f33'/%3E%3Cg fill='%2338bdf8' opacity='0.8'%3E%3Ccircle cx='130' cy='130' r='58' fill='none' stroke='%2338bdf8' stroke-width='1.8'/%3E%3Ccircle cx='130' cy='130' r='28'/%3E%3C/g%3E%3Cg fill='%23e8eefc' font-family='sans-serif'%3E%3Ctext x='20' y='36' font-size='10' letter-spacing='2' opacity='0.55'%3ECORE%3C/text%3E%3C/g%3E%3C/svg%3E"
+             alt="作品墙小图：核心符号练习，蓝色同心圆">
+        <span>核心符号</span>
+      </div>
+      <div class="mj-wall-item w1">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 260 260'%3E%3Crect width='260' height='260' fill='%232b1d14'/%3E%3Cg fill='%23ffb86b'%3E%3Crect x='50' y='150' width='30' height='70' rx='4'/%3E%3Crect x='98' y='110' width='30' height='110' rx='4'/%3E%3Crect x='146' y='132' width='30' height='88' rx='4'/%3E%3Crect x='194' y='86' width='30' height='134' rx='4' opacity='0.7'/%3E%3C/g%3E%3Cg fill='%23e8eefc' font-family='sans-serif'%3E%3Ctext x='20' y='38' font-size='10' letter-spacing='2' opacity='0.55'%3ERANK%3C/text%3E%3C/g%3E%3C/svg%3E"
+             alt="作品墙小图：数据色谱实验，琥珀色柱阵">
+        <span>数据色谱</span>
+      </div>
+      <div class="mj-wall-item w1">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 260 260'%3E%3Crect width='260' height='260' fill='%230f1f2c'/%3E%3Cg stroke='%23a3d977' stroke-width='1.6' fill='none'%3E%3Cpath d='M30 200c40-80 80-80 100 0s60 40 100-40'/%3E%3Cpath d='M30 168c40-80 80-80 100 0s60 40 100-40' stroke-opacity='0.45'/%3E%3C/g%3E%3Cg fill='%23e8eefc' font-family='sans-serif'%3E%3Ctext x='20' y='38' font-size='10' letter-spacing='2' opacity='0.55'%3ECURVE%3C/text%3E%3C/g%3E%3C/svg%3E"
+             alt="作品墙小图：曲线研究，草绿色双向波形">
+        <span>曲线研究</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 用户评价 -->
+<section class="mj-section" id="mjReview">
+  <div class="mj-wrap">
+    <div class="mj-sec-head">
+      <div class="mj-kicker">Voices</div>
+      <h2>用户评价 · 真实使用感受</h2>
+      <p>来自社区成员的真实反馈，涵盖检索效率、内容品质与创作者体验三个维度。</p>
+      <div class="mj-sec-line"></div>
+    </div>
+    <div class="mj-reviews">
+      <article class="mj-review">
+        <p>用了两年多，最直观的变化是“搜到就能用”的比例明显变高了。以前要试三四条链接，现在通常第一条就对，省下来的时间可以真正用来看内容。</p>
+        <div class="mj-review-who"><span class="mj-avatar" style="background:#38bdf8">周</span><b>周行</b> · 普通用户</div>
+      </article>
+      <article class="mj-review">
+        <p>作为创作者，我比较在意平台规则是否清晰。这里每次规则调整都会发公告，还会解释为什么改，这点让我愿意长期在这里更新。</p>
+        <div class="mj-review-who"><span class="mj-avatar" style="background:#7c5cff">阿</span><b>阿栗</b> · 知识科普创作者</div>
+      </article>
+      <article class="mj-review">
+        <p>资源健康度那个标识挺有用，虽然只是个分数，但至少能让我快速筛掉一看就不靠谱的结果，比单纯看名字靠谱得多。</p>
+        <div class="mj-review-who"><span class="mj-avatar" style="background:#35e0a1">林</span><b>林小满</b> · 学生</div>
+      </article>
+      <article class="mj-review">
+        <p>审核员工作记录那期我看了两遍。以前觉得审核就是点点鼠标，看完才知道判断标准这么细，也理解了为什么有些内容会被拒。</p>
+        <div class="mj-review-who"><span class="mj-avatar" style="background:#ffb86b">陈</span><b>陈默</b> · 普通用户</div>
+      </article>
+      <article class="mj-review">
+        <p>投稿流程比我预期的顺畅，从上传到审核反馈大概两天，反馈里还标了具体建议。这种细节对新人作者挺重要的。</p>
+        <div class="mj-review-who"><span class="mj-avatar" style="background:#ff9ec4">许</span><b>许一</b> · 影像创作者</div>
+      </article>
+      <article class="mj-review">
+        <p>企业合作方面也很专业，对接人会把授权范围、使用场景写得很清楚，不像有些平台含糊其辞。我们对合作方的合规要求高，这里能对得上。</p>
+        <div class="mj-review-who"><span class="mj-avatar" style="background:#a3d977">合</span><b>某文化机构</b> · 合作品牌</div>
+      </article>
+      <article class="mj-review">
+        <p>界面不花哨，这点我很喜欢。很多同类站点恨不得把首页塞满广告，这里反而克制，信息层级清楚，找东西不费劲。</p>
+        <div class="mj-review-who"><span class="mj-avatar" style="background:#38bdf8">吴</span><b>吴岸</b> · 普通用户</div>
+      </article>
+      <article class="mj-review">
+        <p>专题企划是真的在持续做，不是随便挂几个页面。索引素养计划我从第一期追到现在，确实建立了一些以前没有的判断习惯。</p>
+        <div class="mj-review-who"><span class="mj-avatar" style="background:#7c5cff">苏</span><b>苏黎</b> · 社区活跃成员</div>
+      </article>
+      <article class="mj-review">
+        <p>希望以后能有更多移动端的整理工具，现在手机上收藏还行，深度整理还是得回到电脑。整体给四星半。</p>
+        <div class="mj-review-who"><span class="mj-avatar" style="background:#35e0a1">何</span><b>何田田</b> · 普通用户</div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 企业动态 -->
+<section class="mj-section" id="mjUpdate">
+  <div class="mj-wrap">
+    <div class="mj-sec-head">
+      <div class="mj-kicker">Newsroom</div>
+      <h2>企业动态 · 官方发布与更新日志</h2>
+      <p>记录磁极视界的每一次产品迭代、规则调整与生态合作，公开透明是我们的底线。</p>
+      <div class="mj-sec-line"></div>
+    </div>
+    <div class="mj-updates">
+      <article class="mj-update">
+        <div class="mj-update-date">2026-11-15<small>产品更新</small></div>
+        <div>
+          <h3>索引健康度标识全面升级至 3.0 版本</h3>
+          <p>新增“更新响应速度”维度，历史评分同步重算，用户可在详情页查看评分构成。</p>
+        </div>
+      </article>
+      <article class="mj-update">
+        <div class="mj-update-date">2026-11-08<small>官方发布</small></div>
+        <div>
+          <h3>《内容生态白皮书（2026 版）》正式发布</h3>
+          <p>披露平台治理数据、创作者扶持成效与下一年度规划，可在联系页提交申请。</p>
+        </div>
+      </article>
+      <article class="mj-update">
+        <div class="mj-update-date">2026-10-29<small>社区活动</small></div>
+        <div>
+          <h3>冬季“深度资源发现计划”开启报名</h3>
+          <p>面向垂直领域创作者征集长内容提案，入选者可获得制作支持与首页推荐位。</p>
+        </div>
+      </article>
+      <article class="mj-update">
+        <div class="mj-update-date">2026-10-12<small>规则调整</small></div>
+        <div>
+          <h3>创作者投稿审核标准完成第三轮公开征集</h3>
+          <p>累计收到 412 条社区意见，采纳率约 38%，修订版细则已同步至帮助中心。</p>
+        </div>
+      </article>
+    </div>
+    <div style="margin-top:34px">
+      <div class="mj-sec-head" style="margin-bottom:18px">
+        <div class="mj-kicker">Partners</div>
+        <h2 style="font-size:20px">合作品牌与伙伴</h2>
+      </div>
+      <div class="mj-partners">
+        <span class="mj-partner">云澜数据</span>
+        <span class="mj-partner">拾光影像</span>
+        <span class="mj-partner">北岸文化</span>
+        <span class="mj-partner">启程教育</span>
+        <span class="mj-partner">墨野出版</span>
+        <span class="mj-partner">青禾公益</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="mj-section" id="mjFaq">
+  <div class="mj-wrap">
+    <div class="mj-sec-head" style="text-align:center;margin-left:auto;margin-right:auto">
+      <div class="mj-kicker">Help Center</div>
+      <h2>帮助中心 · 常见问题</h2>
+      <p>关于磁力搜索磁力链接的使用、投稿与合作的常见疑问，这里给出官方答复。</p>
+    </div>
+    <div class="mj-faq">
+      <details open>
+        <summary>磁极视界的磁力搜索磁力链接服务与其他站点有什么不同？</summary>
+        <p>我们不做简单的聚合转发，而是对每条索引执行来源校验、内容分级与健康度评估三层流程，并在页面上以标识呈现结果质量。同时平台配套专题、创作者内容与使用指南，让检索这件事有上下文、有参考、有边界。</p>
+      </details>
+      <details>
+        <summary>资源健康度评分是如何计算的？用户可以参与吗？</summary>
+        <p>评分由来源可信度、文件完整度、社区口碑与更新响应速度四项加权得出，每 24 小时更新一次。用户可以通举报入口反馈失效或异常条目，核实后会影响对应来源的评分，这也是我们社区共建机制的一部分。</p>
+      </details>
+      <details>
+        <summary>我是创作者，如何向磁极视界投稿？</summary>
+        <p>可在本页点击“创作者投稿”按钮提交基础信息，或通过联系页的投稿表单上传作品提案。审核周期通常为 2 至 5 个工作日，我们会给出具体修改建议。通过认证的创作者将进入内容扶持计划，获得选题、剪辑与分发支持。</p>
+      </details>
+      <details>
+        <summary>平台对原创内容有哪些保护措施？</summary>
+        <p>创作者提交作品时需签署原创承诺，平台会对上传内容做相似度比对。发生争议时，我们依据《内容生态白皮书》中的处理流程介入，必要时冻结相关分发并公示处理结果，保障原创者权益。</p>
+      </details>
+      <details>
+        <summary>如何申请《内容生态白皮书》或行业数据合作？</summary>
+        <p>通过本页联系表单说明机构名称、使用场景与所需范围，我们的品牌合作团队会在 3 个工作日内回复。白皮书可提供摘要版与完整版两种规格，完整版需签署数据使用约定。</p>
+      </details>
+      <details>
+        <summary>发现不当内容或失效资源，应该怎么反馈？</summary>
+        <p>视频卡片与详情页均设有反馈入口，也可通过联系页提交具体说明。举报处理平均时长控制在 6 小时内，处理结果会通过站内通知反馈给提交者。对于高频问题来源，我们会调整其索引权重。</p>
+      </details>
+      <details>
+        <summary>平台是否支持企业定制化的内容合作？</summary>
+        <p>支持。我们为企业客户提供专题共创、品牌纪录片、资源合规咨询等服务，合作流程包含需求评估、方案设计、制作执行与效果复盘四个阶段。具体可参考联系页中的商务合作说明。</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- 联系 -->
+<section class="mj-section" id="mjContact">
+  <div class="mj-wrap">
+    <div class="mj-contact">
+      <div>
+        <h2>联系我们 · 投稿与合作</h2>
+        <p>无论是内容投稿、品牌合作还是产品建议，磁极视界都愿意认真听。作为官方网站，这里是我们与用户、创作者之间最直接的沟通窗口。</p>
+        <ul class="mj-contact-list">
+          <li><b>商务合作</b><span>business@magnet-view.example</span></li>
+          <li><b>内容投稿</b><span>creator@magnet-view.example</span></li>
+          <li><b>用户支持</b><span>support@magnet-view.example</span></li>
+          <li><b>办公地址</b><span>浙江省杭州市滨江区江北路 88 号内容产业园 B 座 12 层</span></li>
+          <li><b>工作时间</b><span>周一至周五 10:00 - 19:00（法定节假日除外）</span></li>
+        </ul>
+      </div>
+      <div>
+        <form id="mjContactForm">
+          <h2 style="font-size:18px;margin-bottom:14px">留下你的信息</h2>
+          <div class="mj-inputrow">
+            <input type="text" class="mj-field" id="mjFormName" placeholder="你的称呼" aria-label="你的称呼">
+            <input type="email" class="mj-field" id="mjFormMail" placeholder="联系邮箱" aria-label="联系邮箱">
+          </div>
+          <textarea class="mj-field" id="mjFormMsg" placeholder="想聊的内容，例如投稿方向、合作场景或使用建议" aria-label="留言内容"></textarea>
+          <div style="margin-top:12px;display:flex;gap:10px;flex-wrap:wrap">
+            <button class="mj-btn mj-btn-primary" type="submit">提交信息</button>
+            <button class="mj-btn mj-btn-ghost" type="button" data-mj-open="submit">创作者投稿</button>
+            <button class="mj-btn mj-btn-ghost" type="button" data-mj-open="report">内容反馈</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- 页脚 -->
+<footer class="mj-foot">
+  <div class="mj-wrap">
+    <div class="mj-foot-grid">
+      <div>
+        <div class="mj-foot-brand">
+          <span class="mj-logo-mark" style="width:30px;height:30px;font-size:15px">磁</span>
+          <strong style="color:#fff;font-size:15px">磁极视界</strong>
+        </div>
+        <p>磁极视界是专注于磁力搜索磁力链接的内容生态平台，坚持原创优先与品质筛选，持续为创作者和用户提供值得信赖的资源发现体验。</p>
+        <p style="margin-top:10px;color:var(--mj-neon)">官方网站 · 持续运营中</p>
+      </div>
+      <div>
+        <h4>内容导航</h4>
+        <ul>
+          <li><a href="#mjFocus">焦点内容</a></li>
+          <li><a href="#mjFeed">热门视频流</a></li>
+          <li><a href="#mjSpecial">专题企划</a></li>
+          <li><a href="#mjWall">影像墙</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>品牌与社区</h4>
+        <ul>
+          <li><a href="#mjIntro">品牌故事</a></li>
+          <li><a href="#mjCreator">创作者矩阵</a></li>
+          <li><a href="#mjUpdate">企业动态</a></li>
+          <li><a href="#mjReview">用户评价</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>支持与联系</h4>
+        <ul>
+          <li><a href="#mjFaq">帮助中心</a></li>
+          <li><a href="#mjContact">商务合作</a></li>
+          <li><a href="#mjContact">内容投稿</a></li>
+          <li><a href="#mjContact">用户反馈</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="mj-foot-bottom">
+      <span>© 2019 - 2026 磁极视界（杭州）网络科技有限公司 · 版权所有</span>
+      <span>浙ICP备 2026008889 号 - 2 · 增值电信业务经营许可证 · 官方网站</span>
+    </div>
+  </div>
+</footer>
+
+<button class="mj-top" id="mjTop" aria-label="回到顶部">↑</button>
+<div class="mj-toast" id="mjToast" role="status" aria-live="polite"></div>
+
+<!-- 弹窗：投稿 -->
+<div class="mj-modal" id="mjModalSubmit" data-mj-modal>
+  <div class="mj-modal-box">
+    <button class="mj-modal-close" data-mj-close aria-label="关闭">×</button>
+    <h3>创作者投稿通道</h3>
+    <p>提交你的作品方向与联系方式，我们的内容团队会在 2 至 5 个工作日内回复。请确保作品为原创或已获得合法授权。</p>
+    <input class="mj-field" style="margin-bottom:10px" id="mjSubName" placeholder="创作者昵称" aria-label="创作者昵称">
+    <input class="mj-field" style="margin-bottom:10px" id="mjSubTopic" placeholder="投稿方向，例如：索引科普 / 城市影像" aria-label="投稿方向">
+    <button class="mj-btn mj-btn-primary" type="button" id="mjSubSend" style="width:100%;justify-content:center">提交投稿意向</button>
+  </div>
+</div>
+
+<!-- 弹窗：反馈 -->
+<div class="mj-modal" id="mjModalReport" data-mj-modal>
+  <div class="mj-modal-box">
+    <button class="mj-modal-close" data-mj-close aria-label="关闭">×</button>
+    <h3>内容反馈</h3>
+    <p>请简要描述你遇到的问题，例如链接失效、信息有误或内容不当。我们会尽快核实并处理。</p>
+    <textarea class="mj-field" id="mjReportText" placeholder="问题描述" aria-label="问题描述"></textarea>
+    <button class="mj-btn mj-btn-primary" type="button" id="mjReportSend" style="width:100%;justify-content:center;margin-top:10px">提交反馈</button>
+  </div>
+</div>
+
+<!-- 弹窗：创作者详情 -->
+<div class="mj-modal" id="mjModalCreator" data-mj-modal>
+  <div class="mj-modal-box">
+    <button class="mj-modal-close" data-mj-close aria-label="关闭">×</button>
+    <h3 id="mjCreatorName">创作者</h3>
+    <p id="mjCreatorDesc">创作者简介</p>
+    <button class="mj-btn mj-btn-ghost" type="button" id="mjCreatorFollow" style="width:100%;justify-content:center">关注这位创作者</button>
+  </div>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  var toastEl = document.getElementById('mjToast');
+  var toastTimer = null;
+  function showToast(msg){
+    toastEl.textContent = msg;
+    toastEl.classList.add('is-show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){ toastEl.classList.remove('is-show'); }, 2200);
+  }
+
+  /* 移动端导航 */
+  var burger = document.getElementById('mjBurger');
+  var nav = document.getElementById('mjNav');
+  burger.addEventListener('click', function(){
+    var open = nav.classList.toggle('is-open');
+    burger.classList.toggle('is-open', open);
+    burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  nav.addEventListener('click', function(e){
+    if(e.target.tagName === 'A' && window.innerWidth <= 760){
+      nav.classList.remove('is-open');
+      burger.classList.remove('is-open');
+      burger.setAttribute('aria-expanded','false');
+    }
+  });
+
+  /* 导航高亮 */
+  var navLinks = nav.querySelectorAll('a');
+  navLinks.forEach(function(a){
+    a.addEventListener('click', function(){
+      navLinks.forEach(function(x){ x.classList.remove('is-active'); });
+      a.classList.add('is-active');
+    });
+  });
+
+  /* 搜索反馈 */
+  var searchInput = document.getElementById('mjSearchInput');
+  var searchBtn = document.getElementById('mjSearchBtn');
+  var searchHint = document.getElementById('mjSearchHint');
+  var cards = document.querySelectorAll('[data-mj-card]');
+
+  function runSearch(){
+    var kw = (searchInput.value || '').trim();
+    if(!kw){
+      searchHint.classList.remove('is-show');
+      cards.forEach(function(c){ c.style.display = ''; });
+      showToast('请输入检索关键词');
+      return;
+    }
+    var hit = 0;
+    cards.forEach(function(c){
+      var text = (c.getAttribute('data-mj-keywords') || '') + ' ' + c.textContent;
+      var ok = text.indexOf(kw) > -1;
+      c.style.display = ok ? '' : 'none';
+      if(ok) hit++;
+    });
+    searchHint.textContent = '「' + kw + '」匹配到 ' + hit + ' 条内容' + (hit ? '，已为你筛选置顶展示。' : '，换个更通用的词试试，例如：索引、测评、城市、手作。');
+    searchHint.classList.add('is-show');
+    if(hit){
+      document.getElementById('mjFeed').scrollIntoView({behavior:'smooth', block:'start'});
+    }
+  }
+  searchBtn.addEventListener('click', runSearch);
+  searchInput.addEventListener('keydown', function(e){
+    if(e.key === 'Enter'){ e.preventDefault(); runSearch(); }
+  });
+  searchInput.addEventListener('input', function(){
+    if(searchInput.value === ''){
+      searchHint.classList.remove('is-show');
+      cards.forEach(function(c){ c.style.display = ''; });
+    }
+  });
+
+  /* 话题标签筛选 */
+  document.querySelectorAll('[data-mj-topic]').forEach(function(tag){
+    tag.addEventListener('click', function(){
+      var t = tag.getAttribute('data-mj-topic');
+      searchInput.value = t;
+      runSearch();
+      showToast('已按话题「' + t + '」筛选');
+    });
+  });
+
+  /* 点赞 / 收藏 */
+  document.querySelectorAll('[data-mj-like]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var m = btn.textContent.match(/(\d+)/);
+      var base = m ? parseInt(m[1],10) : 0;
+      var liked = btn.classList.toggle('is-like');
+      var num = liked ? base + 1 : base;
+      btn.textContent = (liked ? '♥' : '♡') + ' 赞 ' + num;
+      showToast(liked ? '已点赞，感谢你的认可' : '已取消点赞');
+    });
+  });
+  document.querySelectorAll('[data-mj-fav]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var fav = btn.classList.toggle('is-fav');
+      btn.textContent = fav ? '★ 已收藏' : '☆ 收藏';
+      showToast(fav ? '已加入收藏夹' : '已取消收藏');
+    });
+  });
+
+  /* 分享 */
+  function doShare(){
+    var url = 'https://magnet-view.example/';
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(url).then(function(){
+        showToast('页面链接已复制，可分享给好友');
+      }).catch(function(){
+        showToast('分享链接：magnet-view.example');
+      });
+    }else{
+      showToast('分享链接：magnet-view.example');
+    }
+  }
+  document.querySelectorAll('[data-mj-share]').forEach(function(btn){
+    btn.addEventListener('click', doShare);
+  });
+
+  /* 弹窗 */
+  var modalSubmit = document.getElementById('mjModalSubmit');
+  var modalReport = document.getElementById('mjModalReport');
+  var modalCreator = document.getElementById('mjModalCreator');
+  document.querySelectorAll('[data-mj-open]').forEach(function(el){
+    el.addEventListener('click', function(){
+      var key = el.getAttribute('data-mj-open');
+      if(key === 'submit'){ openModal(modalSubmit); }
+      else if(key === 'report'){ openModal(modalReport); }
+      else if(key === 'creator1'){ openCreator('林间索引','七年归档经验，擅长把复杂流程拆成可执行步骤，作品以清晰的命名体系著称。'); }
+      else if(key === 'creator2'){ openCreator('实测研究所','坚持自费实测与公开数据，三年来完成 96 组对照实验，被称为最不客气的测评人。'); }
+      else if(key === 'creator3'){ openCreator('幕后观察站','专注记录行业一线工作者，用长镜头与耐心提问，呈现平台背后的真实运行逻辑。'); }
+      else if(key === 'creator4'){ openCreator('慢手作坊','用影像记录数字生活与实体空间的平衡，主张少一点收藏、多一点使用。'); }
+    });
+  });
+  function openModal(m){
+    m.classList.add('is-open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeModal(m){
+    m.classList.remove('is-open');
+    document.body.style.overflow = '';
+  }
+  function openCreator(name, desc){
+    document.getElementById('mjCreatorName').textContent = name;
+    document.getElementById('mjCreatorDesc').textContent = desc;
+    openModal(modalCreator);
+  }
+  document.querySelectorAll('[data-mj-close]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      closeModal(btn.closest('[data-mj-modal]'));
+    });
+  });
+  document.querySelectorAll('[data-mj-modal]').forEach(function(m){
+    m.addEventListener('click', function(e){
+      if(e.target === m){ closeModal(m); }
+    });
+  });
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape'){
+      document.querySelectorAll('[data-mj-modal].is-open').forEach(closeModal);
+    }
+  });
+
+  /* 关注创作者 */
+  var followBtn = document.getElementById('mjCreatorFollow');
+  followBtn.addEventListener('click', function(){
+    var on = followBtn.textContent.indexOf('已关注') > -1;
+    followBtn.textContent = on ? '关注这位创作者' : '已关注 · 将收到更新提醒';
+    showToast(on ? '已取消关注' : '关注成功');
+  });
+
+  /* 投稿提交 */
+  document.getElementById('mjSubSend').addEventListener('click', function(){
+    var n = document.getElementById('mjSubName').value.trim();
+    var t = document.getElementById('mjSubTopic').value.trim();
+    if(!n || !t){
+      showToast('请填写昵称与投稿方向');
+      return;
+    }
+    document.getElementById('mjSubName').value = '';
+    document.getElementById('mjSubTopic').value = '';
+    closeModal(modalSubmit);
+    showToast('投稿意向已提交，我们会尽快联系你');
+  });
+
+  /* 反馈提交 */
+  document.getElementById('mjReportSend').addEventListener('click', function(){
+    var v = document.getElementById('mjReportText').value.trim();
+    if(!v){
+      showToast('请填写问题描述');
+      return;
+    }
+    document.getElementById('mjReportText').value = '';
+    closeModal(modalReport);
+    showToast('反馈已收到，平均 6 小时内处理');
+  });
+
+  /* 联系表单 */
+  document.getElementById('mjContactForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    var name = document.getElementById('mjFormName').value.trim();
+    var mail = document.getElementById('mjFormMail').value.trim();
+    var msg = document.getElementById('mjFormMsg').value.trim();
+    if(!name || !mail || !msg){
+      showToast('请完整填写称呼、邮箱与留言');
+      return;
+    }
+    document.getElementById('mjFormName').value = '';
+    document.getElementById('mjFormMail').value = '';
+    document.getElementById('mjFormMsg').value = '';
+    showToast('信息已提交，我们会通过邮箱与你联系');
+  });
+
+  /* 回到顶部 */
+  var topBtn = document.getElementById('mjTop');
+  window.addEventListener('scroll', function(){
+    if(window.scrollY > 520){ topBtn.classList.add('is-show'); }
+    else{ topBtn.classList.remove('is-show'); }
+  }, {passive:true});
+  topBtn.addEventListener('click', function(){
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+
+})();
+</script>
+</body>
+            </html>
